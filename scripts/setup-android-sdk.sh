@@ -15,7 +15,7 @@ echo "Finished installing openjdk"
 
 uname -m
 uname -p
-echo $TERMUX_SDK_REVISION
+echo $TERMUX_NDK_VERSION
 JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 printenv
 
