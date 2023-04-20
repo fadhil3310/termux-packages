@@ -18,7 +18,7 @@ termux_step_make() {
 		https://services.gradle.org/distributions/gradle-$_GRADLE_VERSION-bin.zip \
 		$TERMUX_PKG_CACHEDIR/gradle-$_GRADLE_VERSION-bin.zip \
 		#50a7d30529fa939721fe9268a0205142f3f2302bcac5fb45b27a3902e58db54a beda hash sama 6.5.1
-		518a863631feb7452b8f1b3dc2aaee5f388355cc3421bbd0275fbeadd77e84b2
+		6147605a23b4eff6c334927a86ff3508cb5d6722cd624c97ded4c2e8640f1f87
 	mkdir $TERMUX_PKG_TMPDIR/gradle
 	unzip -q $TERMUX_PKG_CACHEDIR/gradle-$_GRADLE_VERSION-bin.zip -d $TERMUX_PKG_TMPDIR/gradle
 
