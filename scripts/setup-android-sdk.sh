@@ -9,7 +9,7 @@ set -e -u
 # Please set the JAVA_HOME variable in your environment to match the
 # location of your Java installation.
 echo "Start installing openjdk"
-sudo apt-get install openjdk-8-jre
+sudo apt-get install openjdk-17-jre
 echo "Finished installing openjdk"
 
 # Install desired parts of the Android SDK:
