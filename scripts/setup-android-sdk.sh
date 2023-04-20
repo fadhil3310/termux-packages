@@ -14,7 +14,7 @@ echo "Finished installing openjdk"
 
 uname -m
 uname -p
-$JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-amd64"
+JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 
 #if [ uname -p = "x86_64" ]; then
 # 	$JAVA_HOME = /usr/lib/jvm/java-17-openjdk-amd64
