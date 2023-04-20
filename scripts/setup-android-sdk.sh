@@ -8,7 +8,9 @@ set -e -u
 # ERROR: JAVA_HOME is set to an invalid directory: /usr/lib/jvm/java-8-openjdk-amd64
 # Please set the JAVA_HOME variable in your environment to match the
 # location of your Java installation.
-sudo apt-get install openjdk-8-jre
+echo "Start installing openjdk"
+apt-get install openjdk-8-jre
+echo "Finished installing openjdk"
 
 # Install desired parts of the Android SDK:
 . $(cd "$(dirname "$0")"; pwd)/properties.sh
