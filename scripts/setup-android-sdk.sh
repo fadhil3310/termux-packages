@@ -10,14 +10,14 @@ set -e -u
 # location of your Java installation.
 echo "Start installing openjdk"
 sudo apt-get install openjdk-17-jre
-sudo apt-get install openjdk-8-jre
+# sudo apt-get install openjdk-8-jre
 echo "Finished installing openjdk"
 
-uname -m
-uname -p
-echo $TERMUX_NDK_VERSION
-JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-printenv
+# uname -m
+# uname -p
+# echo $TERMUX_NDK_VERSION
+# JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+# printenv
 
 #if [ uname -p = "x86_64" ]; then
 # 	$JAVA_HOME = /usr/lib/jvm/java-17-openjdk-amd64
