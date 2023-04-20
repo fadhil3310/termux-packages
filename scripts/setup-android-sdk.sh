@@ -12,6 +12,22 @@ echo "Start installing openjdk"
 sudo apt-get install openjdk-17-jre
 echo "Finished installing openjdk"
 
+uname -p
+
+if [ uname -p = "x86_64" ]; then
+	$JAVA_HOME = /usr/lib/jvm/java-17-openjdk-amd64
+elif [ uname -p = "i686" ]; then
+	$JAVA_HOME = /usr/lib/jvm/java-17-openjdk-i686
+elif [ uname -p = "aarch64" ]; then
+	$JAVA_HOME = /usr/lib/jvm/java-17-openjdk-aarch64
+elif [ uname -p = "arm" ]; then
+	$JAVA_HOME = /usr/lib/jvm/java-17-openjdk-arm
+else
+	echo "Unknown processor type"
+	exit 1
+fi
+
+
 # Install desired parts of the Android SDK:
 . $(cd "$(dirname "$0")"; pwd)/properties.sh
 . $(cd "$(dirname "$0")"; pwd)/build/termux_download.sh
