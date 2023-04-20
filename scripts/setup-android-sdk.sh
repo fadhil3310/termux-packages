@@ -10,6 +10,7 @@ set -e -u
 # location of your Java installation.
 echo "Start installing openjdk"
 sudo apt-get install openjdk-17-jre
+sudo apt-get install openjdk-8-jre
 echo "Finished installing openjdk"
 
 uname -m
