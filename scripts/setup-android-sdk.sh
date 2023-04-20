@@ -13,6 +13,8 @@ sudo apt-get install openjdk-17-jre
 # sudo apt-get install openjdk-8-jre
 echo "Finished installing openjdk"
 
+pwd
+
 # uname -m
 # uname -p
 # echo $TERMUX_NDK_VERSION
