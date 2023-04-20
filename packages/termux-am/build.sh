@@ -8,14 +8,17 @@ TERMUX_PKG_SHA256=f13e7de6682b2a8303ac69e6a908fc7bd2ae091b3941eb33ecc35f47ea77a4
 TERMUX_PKG_PLATFORM_INDEPENDENT=true
 TERMUX_PKG_BUILD_IN_SRC=true
 TERMUX_PKG_CONFLICTS="termux-tools (<< 0.51)"
-_GRADLE_VERSION=6.5.1
+#_GRADLE_VERSION=6.5.1
+# Diupdate ke 7.6.1 karena tidak support java 17 (class version 61)
+_GRADLE_VERSION=7.6.1
 
 termux_step_make() {
 	# Download and use a new enough gradle version to avoid the process hanging after running:
 	termux_download \
 		https://services.gradle.org/distributions/gradle-$_GRADLE_VERSION-bin.zip \
 		$TERMUX_PKG_CACHEDIR/gradle-$_GRADLE_VERSION-bin.zip \
-		50a7d30529fa939721fe9268a0205142f3f2302bcac5fb45b27a3902e58db54a
+		#50a7d30529fa939721fe9268a0205142f3f2302bcac5fb45b27a3902e58db54a beda hash sama 6.5.1
+		518a863631feb7452b8f1b3dc2aaee5f388355cc3421bbd0275fbeadd77e84b2
 	mkdir $TERMUX_PKG_TMPDIR/gradle
 	unzip -q $TERMUX_PKG_CACHEDIR/gradle-$_GRADLE_VERSION-bin.zip -d $TERMUX_PKG_TMPDIR/gradle
 
