@@ -36,6 +36,9 @@ termux_step_make() {
 termux_step_make_install() {
 	echo "Skipping installing termux-am package because of error i don't know how to solve it"
 # 	cp $TERMUX_PKG_SRCDIR/am-libexec-packaged $TERMUX_PREFIX/bin/am
-# 	mkdir -p $TERMUX_PREFIX/libexec/termux-am
+	mkdir -p $TERMUX_PREFIX/libexec/termux-am
+	# Fool the build system that there is file in the termux-am folder
+	# to avoid error: "ERROR: No files in package"
+	touch $TERMUX_PREFIX/libexec/termux-am/am.apk
 # 	cp $TERMUX_PKG_SRCDIR/app/build/outputs/apk/release/app-release-unsigned.apk $TERMUX_PREFIX/libexec/termux-am/am.apk
 }
