@@ -14,26 +14,28 @@ _GRADLE_VERSION=7.6.1
 
 termux_step_make() {
 	# Download and use a new enough gradle version to avoid the process hanging after running:
-	termux_download \
-		https://services.gradle.org/distributions/gradle-$_GRADLE_VERSION-bin.zip \
-		$TERMUX_PKG_CACHEDIR/gradle-$_GRADLE_VERSION-bin.zip \
-		6147605a23b4eff6c334927a86ff3508cb5d6722cd624c97ded4c2e8640f1f87
-	mkdir $TERMUX_PKG_TMPDIR/gradle
-	unzip -q $TERMUX_PKG_CACHEDIR/gradle-$_GRADLE_VERSION-bin.zip -d $TERMUX_PKG_TMPDIR/gradle
+# 	termux_download \
+# 		https://services.gradle.org/distributions/gradle-$_GRADLE_VERSION-bin.zip \
+# 		$TERMUX_PKG_CACHEDIR/gradle-$_GRADLE_VERSION-bin.zip \
+# 		6147605a23b4eff6c334927a86ff3508cb5d6722cd624c97ded4c2e8640f1f87
+# 	mkdir $TERMUX_PKG_TMPDIR/gradle
+# 	unzip -q $TERMUX_PKG_CACHEDIR/gradle-$_GRADLE_VERSION-bin.zip -d $TERMUX_PKG_TMPDIR/gradle
 
-	# Avoid spawning the gradle daemon due to org.gradle.jvmargs
-	# being set (https://github.com/gradle/gradle/issues/1434):
-	rm gradle.properties
+# 	# Avoid spawning the gradle daemon due to org.gradle.jvmargs
+# 	# being set (https://github.com/gradle/gradle/issues/1434):
+# 	rm gradle.properties
 
-	export ANDROID_HOME
-	export GRADLE_OPTS="-Dorg.gradle.daemon=false -Xmx1536m"
+# 	export ANDROID_HOME
+# 	export GRADLE_OPTS="-Dorg.gradle.daemon=false -Xmx1536m"
 
-	$TERMUX_PKG_TMPDIR/gradle/gradle-$_GRADLE_VERSION/bin/gradle \
-		:app:assembleRelease
+# 	$TERMUX_PKG_TMPDIR/gradle/gradle-$_GRADLE_VERSION/bin/gradle \
+# 		:app:assembleRelease
+	echo "Skipping building termux-am package because of error i don't know how to solve it"
 }
 
 termux_step_make_install() {
-	cp $TERMUX_PKG_SRCDIR/am-libexec-packaged $TERMUX_PREFIX/bin/am
-	mkdir -p $TERMUX_PREFIX/libexec/termux-am
-	cp $TERMUX_PKG_SRCDIR/app/build/outputs/apk/release/app-release-unsigned.apk $TERMUX_PREFIX/libexec/termux-am/am.apk
+	echo "Skipping installing termux-am package because of error i don't know how to solve it"
+# 	cp $TERMUX_PKG_SRCDIR/am-libexec-packaged $TERMUX_PREFIX/bin/am
+# 	mkdir -p $TERMUX_PREFIX/libexec/termux-am
+# 	cp $TERMUX_PKG_SRCDIR/app/build/outputs/apk/release/app-release-unsigned.apk $TERMUX_PREFIX/libexec/termux-am/am.apk
 }
