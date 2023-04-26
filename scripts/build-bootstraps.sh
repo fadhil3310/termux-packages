@@ -404,11 +404,11 @@ main() {
 		PACKAGES+=("bash")
 		# Remove bzip2 because of error i don't know how to solve it
 		#PACKAGES+=("bzip2")
-		if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
-			PACKAGES+=("command-not-found")
-		else
-			PACKAGES+=("proot")
-		fi
+		#if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
+		#	PACKAGES+=("command-not-found")
+		#else
+		PACKAGES+=("proot")
+		#fi
 		PACKAGES+=("coreutils")
 		PACKAGES+=("curl")
 		PACKAGES+=("dash")
